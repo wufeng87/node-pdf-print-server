@@ -13,7 +13,7 @@ const server = printServer(CONFIG);
 if (!server) {
 	process.exit(-1);
 }
-
+CONFIG.port = 3009;
 server.listen(CONFIG.port, CONFIG.hostname, null, onServerListening);
 
 // Keep track of connections, to enforce killing them when server must be stopped.
